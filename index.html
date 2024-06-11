@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savings Account</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <div class="safari-title">
+        <i class="fa fa-home" style="font-size:48px;"></i> SafariHomes
+    </div>
+
+    <div class="safari-image-slogan">
+        <img src="images/home-logo.png" alt="Savings Account Image">
+        <p>Save smart build Big</p>
+    </div>
+
+        <div class="image-section">
+            <img src="images/603-The_Brock_House_Delution_-08.jpg" alt="Image 1">
+            <img src="images/architecture-bungalow-daylight.jpg" alt="Image 2">
+            <img src="images/R.jpeg" alt="Image 3">
+        </div>
+        
+    
+
+
+<div class="main-features">
+    <section id="features" class="features-section">
+        <h2>Key Features</h2>
+        <div class="feature">
+          <h3>Interest Rates</h3>
+          <p>Competitive interest rates starting at 4.5% APR.</p>
+        </div>
+        <div class="feature">
+          <h3>Minimum Balance Requirements</h3>
+          <p>No minimum balance required to maintain your account.</p>
+        </div>
+        <div class="feature">
+          <h3>Fees</h3>
+          <p>Withdrawal fees depending on the amount of money  you withdraw.</p>
+        </div>
+        <div class="feature">
+          <h3>Accessibility</h3>
+          <p>24/7 online banking, mobile app acces.</p>
+        </div>
+      </section>
+      
+      <section id="benefits" class="benefits-container">
+        <h2 class="section-title">Benefits</h2>
+        <div class="benefit-item">
+          <h3>Security</h3>
+          <p>Rest assured with top-tier security measures, ensuring your peace of mind.</p>
+        </div>
+        <div class="benefit-item">
+          <h3>Ease of Access</h3>
+          <p>Enjoy 24/7 access to your account through our seamless online and mobile banking platforms.</p>
+        </div>
+        <div class="benefit-item">
+          <h3>Additional Perks</h3>
+          <p>Take advantage of perks such as automatic transfers, comprehensive budgeting tools our home savings culculator.</p>
+        </div>
+      </section>
+    </div>
+
+
+    
+   
+  
+<!--  
+  
+  -->
+  <div class="header">
+    <h1>SAVE SMART BUILD BIG</h1>
+    <p>✔ High-Interest Rates ✔ Flexible Terms ✔ Secure & Convenient</p>
+    <div class="buttons">
+        <a href="#" class="button">Sign Up Now</a>
+        <a href="#" class="button">Contact Us</a>
+    </div>
+</div>
+
+<div class="content-container">
+    <div class="main-content">
+        <div class="container" id="home-calculator-section">
+            <h2>Home Savings Calculator</h2>
+            <div class="form-group">
+                <label for="homeType">Home Type</label>
+                <select id="homeType">
+                    <option value="apartment">Apartment</option>
+                    <option value="condo">Condo</option>
+                    <option value="house">House</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="location">Location</label>
+                <input type="text" id="location" placeholder="Enter location">
+            </div>
+            <div class="form-group">
+                <label for="homeSize">Home Size (sq ft)</label>
+                <input type="number" id="homeSize" placeholder="Enter size in square feet">
+            </div>
+            <div class="form-group">
+                <label>Home Features</label>
+                <input type="number" id="bedrooms" placeholder="Number of bedrooms">
+                <input type="number" id="bathrooms" placeholder="Number of bathrooms">
+                <input type="number" id="garages" placeholder="Number of garage spaces">
+            </div>
+            <div class="form-group">
+                <label for="timeFrame">Time Frame (years)</label>
+                <input type="number" id="timeFrame" placeholder="Enter number of years">
+            </div>
+            <button onclick="calculateSavings()">Calculate</button>
+            <div class="results" id="results"></div>
+        </div>
+
+
+        <div class="container" id="transactions">
+            <div class="card">
+                <h3>Overview</h3>
+                <p>Current Balance: $3,500.00</p>
+                <p>Total Deposits: $5,000.00</p>
+                <p>Interest Earned: $150.00</p>
+                <p>Progress Towards Savings Goals: 75%</p>
+              </div>
+            <div class="form-group-container">
+                <div class="form-group">
+                  <label for="deposit">Deposit Funds:</label>
+                  <input type="number" id="deposit" placeholder="Enter deposit amount" required min="1" aria-label="Deposit amount">
+                  <button onclick="depositFunds()">Deposit</button>
+                </div>
+                <div class="form-group">
+                  <label for="withdrawal">Withdrawal Funds:</label>
+                  <input type="number" id="withdrawal" placeholder="Enter withdrawal amount" required min="1" aria-label="Withdrawal amount">
+                  <button onclick="withdrawFunds()">Withdraw</button>
+                </div>
+              </div>
+              <div id="feedback" role="alert" style="text-align: center;"></div>
+
+              <div class="card">
+                <h3>Transaction History</h3>
+                <p>Deposit: $500.00 - 01/01/2024</p>
+                <p>Withdrawal: $200.00 - 01/05/2024</p>
+                <p>Deposit: $600.00 - 01/10/2024</p>
+                <p>Interest: $50.00 - 01/15/2024</p>
+                <p>Withdrawal: $300.00 - 01/20/2024</p>
+                <p>Deposit: $400.00 - 01/25/2024</p>
+                <p>Interest: $30.00 - 01/28/2024</p>
+                <p>Deposit: $500.00 - 02/01/2024</p>
+                <p>Withdrawal: $150.00 - 02/05/2024</p>
+                <p>Interest: $20.00 - 02/10/2024</p>
+            </div>
+        </div>
+        <div class="container" id="transaction-history">
+          <div class="testimonial-section">
+            <!-- Testimonial 1 -->
+            <div class="testimonial">
+                <div class="stars">
+                    &#9733; &#9733; &#9733; &#9733; &#9733;
+                </div>
+                <p>"The savings account has been a game changer for my finances. The interest rates are unbeatable and the customer service is top-notch!"</p>
+                <div class="customer-name">- Jane Doe</div>
+            </div>
+        
+            <!-- Testimonial 2 -->
+            <div class="testimonial">
+                <div class="stars">
+                    &#9733; &#9733; &#9733; &#9733; &#9733;
+                </div>
+                <p>"I've been able to save so much more since I opened a savings account here. It's easy to use and I feel secure with my money."</p>
+                <div class="customer-name">- John Smith</div>
+            </div>
+        
+            <!-- Testimonial 3 -->
+            <div class="testimonial">
+                <div class="stars">
+                    &#9733; &#9733; &#9733; &#9733; &#9733;
+                </div>
+                <p>"This savings account offers fantastic interest rates and has really helped me build my savings effortlessly."</p>
+                <div class="customer-name">- Emily Brown</div>
+            </div>
+        
+            <!-- Testimonial 4 -->
+            <div class="testimonial">
+                <div class="stars">
+                    &#9733; &#9733; &#9733; &#9733; &#9733;
+                </div>
+                <p>"The online banking platform is user-friendly and I love how easy it is to manage my savings anytime, anywhere."</p>
+                <div class="customer-name">- Michael Johnson</div>
+            </div>
+        
+            <!-- Testimonial 5 -->
+            <div class="testimonial">
+                <div class="stars">
+                    &#9733; &#9733; &#9733; &#9733; &#9733;
+                </div>
+                <p>"I highly recommend this savings account to anyone looking for a reliable place to grow their money."</p>
+                <div class="customer-name">- Sarah Williams</div>
+            </div>
+        
+            <!-- Testimonial 6 -->
+            <div class="testimonial">
+                <div class="stars">
+                    &#9733; &#9733; &#9733; &#9733; &#9733;
+                </div>
+                <p>"Switching to this savings account was one of the best financial decisions I've made. The benefits are outstanding."</p>
+                <div class="customer-name">- David Lee</div>
+            </div>
+        
+            <!-- Testimonial 7 -->
+            <div class="testimonial">
+                <div class="stars">
+                    &#9733; &#9733; &#9733; &#9733; &#9733;
+                </div>
+                <p>"The customer service is always helpful and responsive. I'm very pleased with my savings account experience."</p>
+                <div class="customer-name">- Laura Martinez</div>
+            </div>
+        
+            <!-- Testimonial 8 -->
+            <div class="testimonial">
+                <div class="stars">
+                    &#9733; &#9733; &#9733; &#9733; &#9733;
+                </div>
+                <p>"I love the automated savings features. It's made saving money much easier and more consistent for me."</p>
+                <div class="customer-name">- Robert Garcia</div>
+            </div>
+        
+            <!-- Testimonial 9 -->
+            <div class="testimonial">
+                <div class="stars">
+                    &#9733; &#9733; &#9733; &#9733; &#9733;
+                </div>
+                <p>"The security measures in place give me peace of mind that my money is safe and secure."</p>
+                <div class="customer-name">- Jessica Wilson</div>
+            </div>
+        
+            <!-- Testimonial 10 -->
+            <div class="testimonial">
+                <div class="stars">
+                    &#9733; &#9733; &#9733; &#9733; &#9733;
+                </div>
+                <p>"The savings account has helped me achieve my financial goals faster than I anticipated. I couldn't be happier!"</p>
+                <div class="customer-name">- James Anderson</div>
+            </div>
+        </div>
+        
+            
+        </div>
+    </div>
+    <div class="sidebar">
+        <a href="javascript:void(0);" onclick="showSection('home-calculator-section')"><i class="fa fa-calculator"></i>Calculator</a>
+        <a href="javascript:void(0);" onclick="showSection('transactions')"><i class="fa fa-exchange"></i> Transactions</a>
+        <a href="javascript:void(0);" onclick="showSection('transaction-history')"><i class="fa fa-users"></i>Testimonials</a>
+    </div>
+</div>
+
+
+<div class="footer">
+    <div class="columns">
+        <div class="column">
+            <h3>SAVINGS ACCOUNTS</h3>
+            <a href="#">High-Interest Savings</a>
+            <a href="#">Joint Savings Accounts</a>
+            <a href="#">Youth Savings Accounts</a>
+            <a href="#">Senior Savings Accounts</a>
+        </div>
+        <div class="column">
+            <h3>LOANS</h3>
+            <a href="#">Home Loans</a>
+        </div>
+        <div class="column">
+            <h3>RESOURCES</h3>
+            <a href="#">Financial Planning</a>
+            <a href="#">Investment Tips</a>
+            <a href="#">Tax Advice</a>
+        </div>
+        <div class="column">
+            <h3>SUPPORT</h3>
+            <a href="#">Customer Service</a>
+            <a href="#">FAQs</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Branch Locator</a>
+        </div>
+    </div>
+    <div class="social">
+        <a href="#">Twitter</a>
+        <a href="#">Facebook</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Instagram</a>
+    </div>
+    <div class="copyright">
+        &copy;2024 SafariHomes Savings. Terms | Privacy
+    </div>
+</div>
+
+      <script>  function showSection(sectionId) {
+        const sections = document.querySelectorAll('.container');
+        sections.forEach(section => {
+            if (section.id === sectionId) {
+                section.style.display = 'block';
+            } else {
+                section.style.display = 'none';
+            }
+        });
+    }
+
+    function calculateSavings() {
+        // Your savings calculation logic here
+        const results = document.getElementById('results');
+        results.innerHTML = 'Savings calculation results will be displayed here.';
+    }
+
+    // Display the first section by default
+    showSection('home-calculator-section');
+
+        function calculateSavings() {
+            var homeSize = document.getElementById('homeSize').value;
+            var timeFrame = document.getElementById('timeFrame').value;
+  
+            var costPerSqFt = 100; 
+            var interestRate = 0.05; 
+  
+            var totalCost = homeSize * costPerSqFt;
+            var monthlySavingsNeeded = totalCost / (timeFrame * 12);
+  
+            var totalSavingsWithInterest = monthlySavingsNeeded * (timeFrame * 12) * (1 + interestRate);
+  
+            var resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = '<p>Total Cost: $' + totalCost.toFixed(2) + '</p>';
+            resultsDiv.innerHTML += '<p>Monthly Savings Needed: $' + monthlySavingsNeeded.toFixed(2) + '</p>';
+            resultsDiv.innerHTML += '<p>Total Savings with Interest: $' + totalSavingsWithInterest.toFixed(2) + '</p>';
+        }
+  
+        function depositFunds() {
+            var depositAmount = parseFloat(document.getElementById('deposit').value);
+            if (depositAmount > 0) {
+                document.getElementById('feedback').innerHTML = 'Successfully deposited $' + depositAmount.toFixed(2);
+                document.getElementById('feedback').style.backgroundColor = '#dff0d8';
+                document.getElementById('feedback').style.color = '#3c763d';
+            } else {
+                document.getElementById('feedback').innerHTML = 'Please enter a valid deposit amount.';
+                document.getElementById('feedback').style.backgroundColor = '#f2dede';
+                document.getElementById('feedback').style.color = '#a94442';
+            }
+        }
+  
+        function withdrawFunds() {
+            var withdrawalAmount = parseFloat(document.getElementById('withdrawal').value);
+            if (withdrawalAmount > 0) {
+                document.getElementById('feedback').innerHTML = 'Successfully withdrew $' + withdrawalAmount.toFixed(2);
+                document.getElementById('feedback').style.backgroundColor = '#dff0d8';
+                document.getElementById('feedback').style.color = '#3c763d';
+            } else {
+                document.getElementById('feedback').innerHTML = 'Please enter a valid withdrawal amount.';
+                document.getElementById('feedback').style.backgroundColor = '#f2dede';
+                document.getElementById('feedback').style.color = '#a94442';
+            }
+        }
+      </script>
+  </body>
+  </html>
+  
